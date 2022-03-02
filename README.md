@@ -1,4 +1,4 @@
-##T2022
+## T2022
 
 This is a boilerplate for an IEEE conference paper
 
