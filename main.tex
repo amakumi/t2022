@@ -1,0 +1,283 @@
+\documentclass[conference, a4paper]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[caption=false, font=footnotesize]{subfig}
+
+\usepackage{glossaries-prefix}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\makeglossaries
+\newacronym[prefixfirst={a\ }, prefix={a\ }]{soa}{SOA}{service-oriented architecture}
+\newacronym[prefixfirst={a\ }, prefix={a\ }]{eai}{EAI}{enterprise application integration}
+\newacronym[prefixfirst={a\ }, prefix={a\ }]{sso}{SSO}{single sign-on}
+\newacronym[prefixfirst={a\ }, prefix={a\ }]{rest}{REST}{representational state transfer}
+\newacronym[prefixfirst={a\ }, prefix={a\ }]{3des}{3DES}{tripleDES}
+
+\newcommand\figref{Fig.~\ref}
+\newcommand\figsref{Figs.~\ref}
+
+\begin{document}
+
+% ============ 1 =======================
+\title{Your Title}
+
+\author{
+\IEEEauthorblockN{Marco Melvern}
+\IEEEauthorblockA{
+\textit{Computer Science Department},\\ \textit{Faculty of Computing and Media}, \\
+Bina Nusantara University, \\
+Jakarta, Indonesia 11480\\
+marco.melvern@binus.ac.id}
+
+}
+
+\maketitle
+
+% ============ 1 =======================
+
+% ============ 2 =======================
+\begin{abstract}
+\boldmath 
+\lipsum[1]
+\end{abstract}
+
+\begin{IEEEkeywords}
+keyword1, keyword2.
+\end{IEEEkeywords}
+
+% ============ 2 =======================
+
+% ============ 3 INTRODUCTION =======================
+\section{INTRODUCTION}
+\label{sec:title}
+
+Write something before a subsection. 
+In Section~\ref{sec:title}, we will discuss. 
+
+\subsection{Background}
+\label{sec:sub:title}
+
+Enterprise architecture has undergone colossal evolution throughout the decades of the history of computers. From the advent of historic mainframe computing to client-server architecture otherwise known as 2-tier to n-tier, to finally \gls{soa} before morphing into what we know now as microservices [2].
+This metamorphosis process initiated and kick-started from the concept of \gls{soa} is, in fact not a defined standard 
+by any industry or organisation by any means, but a practical approach practised by many organisations. 
+The term microservices has also come into mind during this phase. 
+Nowadays, people can acknowledge the fact that microservice is not a newly defined concept or a fresh, out-of-the-box, “breakthrough innovation” that all organisations race to adopt. 
+It is a term that has been around for several years if not decades. However, it is also worth mentioning that the recent trend of implementing microservices from the last few years is also being catapulted by its gradually increasing popularity and exposure; 
+the society can hail this as the digital transformation phenomenon. 
+This sparks the reason why microservices are essentially the way forward and can be evolved further into the future. 
+
+
+Today, organisations particularly large-scale enterprises have begun using agile methodologies in tandem with microservices to develop applications. 
+Assisted by the invention of cloud and distributed technologies, the development environment has never been faster and on a larger scale than before. 
+Often, microservices do give more advantages and privilege for production-ready applications, compared to older, conventional methods, which is still being adopted by several large, older enterprises. 
+The transition of migrating from the predecessor architecture to an ecosystem of microservice can quite be regarded as “an epic journey” [1]. 
+Traditional methods often use monolithic architectures, these monolithic do have drawbacks that include limited technology barriers. 
+This implies that should the complexity of the business logic and business process increase gradually, it will eventually be more difficult to fulfil, improve, and comply with the changes. 
+Furthermore, the scalability factor will be rigorous, as individual applications or services will require to be redeployed completely, making continuous deployment arduous with chances of conflicting issues between services. 
+Lastly, there is a potential to simplify and streamline the process of services. 
+Conventionally, through the existing process, administrators, who are primarily in charge of managing internal services would have to register and fill in a form, then proceed to apply to the services to be requested, before finally inquiring permission from the specific administrators from each service 
+required to be assigned. 
+Hence, procedures like the former could be simplified and streamlined, yet at the same time secure and safe. 
+
+Enterprises and companies for instance Amazon, as an example, has successfully evolved from monolithic services into microservices, transforming its whole business. 
+Amazon started off as utilising a centralised database, before migrating to \gls{soa} [thones]. 
+Initially, its architecture design was not exactly in a form of one monolithic structure, however, the entire services and components were tightly coupled to each other. []
+Having a substantial amount of developers spread across the organisation sets the problem of the growing enterprise; 
+in consequence, Amazon experienced difficulties in deploying changes in a swift manner. All major code changes persist in the deployment pipeline for a lengthy period of time before clients are able to utilise them effectively. 
+Amazon implemented microservices in order to simplify and shorten the pipeline procedure, breaking down structures into single applications which in turn allow developers to pinpoint where the bottlenecks were, what the nature of these slowdowns were, and allowed developers to rebuild them as a service-oriented architecture, each with a small team dedicated to one particular service. 
+Other companies such as Netflix and Linkedin followed afterwards. 
+
+
+Thus, with this paper, the author intends to develop a prototype application for company XYZ, which in this case acts as the client with an objective which can serve as a benchmark to facilitate its integration of their internal services. 
+
+\subsection{Scope}
+\label{sec:sub:title}
+The project will be taken from the author’s internship and will be based on the project taken from an internship. The following are the scope of the project as agreed by the author and the site supervisor: 
+
+Develop a prototype internal portal or web application to facilitate the process. This portal would consist of a dashboard for administrators to facilitate registrations for new employees and/or services which will be integrated into the ecosystem of the enterprise. Spring Boot and Java will be used as the primary framework. This project scope includes the following aspects: 
+
+\begin{itemize}
+    \item Conduct research and gather relevant references to bolster the app development
+    \item Develop the basic, vanilla \gls{rest} \gls{API} service and follow development concepts based on \gls{rest}.
+    \item Develop of the \gls{api} Gateway to link with the Spring back end framework.
+    \item Partake in development of security-related domain of the portal including hitting the \gls{sso}, authentication, and password encryption library.
+    \item Internal testing and evaluation
+    
+\end{itemize}
+
+\subsection{Aim}
+\label{sec:sub:title}
+Through this thesis proposal, it is expected that it would accomplish the following which is to overcome current monolithic architecture issues by introducing and complementing the concept of microservice in large scale enterprises, with the objective including the following: 
+
+To facilitate, and integrate enterprise applications consisting of a plethora of different structures and frameworks. 
+To allow services to operate independently and improve scalability. 
+Thus, continuous deployment can be applied. In doing and executing this project, the development of a fundamental, essential service or web application that is easy-to-use, easy to maintain, reliable, and obliging with one of the latest and favoured frameworks used in enterprise services will be implemented. 
+This application allows what is considered lengthy procedures to be automatically assigned without having to go through the former process. Lastly, to follow the prerequisites, and fundamental concepts of the development process. 
+
+
+\subsection{Benefits}
+\label{sec:sub:title}
+It is expected that the benefits of this particular paper can act as the benchmark for enterprises either small, medium and large in order to utilise and implement microservice as the primary structure of the system per se, which are:
+
+\begin{itemize}
+    \item It promotes higher customer satisfaction/retention
+    \item Better security of company/customer data
+    \item Improves application performance and quality
+    \item Greater flexibility to scale resources up or down
+    \item Improves employee productivity
+    \item Improves application security
+    
+\end{itemize}
+
+
+\subsection{Structure}
+\label{sec:sub:title}
+This paper consists of seven main chapters containing the following own discussion: 
+
+\begin{enumerate}
+    \item {\bf Chapter 1:} \text\ This section examines the project background, the scope of the project that will be covered by the author detailed with individual components, alongside what the author envisions and how it could benefit particular parties.
+    \item {\bf Chapter 2:} \text\ This section covers the fundamental theories, development technologies, and methodology used in this paper.
+    \item {\bf Chapter 3:} \text\ This section discusses the current problem faced by the current
+    implementation and the proposed solution from the author.
+    \item {\bf Chapter 4:} \text\ 
+    \item {\bf Chapter 5:} \text\ 
+    \item {\bf Chapter 6:} \text\ This section tackles the major findings from the previous section and
+    evaluates them respectively.
+    \item {\bf Chapter 7:} \text\ This section wraps up the entire project's process and findings, alongside feasible recommendations and amelioration taken and evaluated from this project.
+\end{enumerate}
+
+
+% ============ 3 =======================
+
+% ============ 4 =======================
+
+% ===== FOUNDATION
+
+\section{Chapter 2: Theoretical Framework}
+\label{sec:citation}
+
+\subsection{\textbf{\textit{Theoretical Foundation}}}
+\label{sec:sub:title}
+
+\subsubsection{Enterprise Application Integration}
+\label{sec:sub:title}
+
+\subsubsection{Microservice}
+\label{sec:sub:title}
+
+\subsubsection{Application Programming Interface}
+\label{sec:sub:title}
+
+\subsubsection{Representational State Transfer}
+\label{sec:sub:title}
+
+\subsubsection{Web Application}
+\label{sec:sub:title}
+
+\subsubsection{AGILE Software Development (SCRUM)}
+\label{sec:sub:title}
+
+\subsubsection{Token}
+\label{sec:sub:title}
+
+\subsubsection{Single Sign-On}
+\label{sec:sub:title}
+
+% ===== FRAMEWORK
+
+\subsection{\textbf{\textit{{Development Framework}}}}
+\label{sec:sub:title}
+
+
+\subsubsection{Java}
+\label{sec:sub:title}
+
+\subsubsection{Spring Boot}
+\label{sec:sub:title}
+
+\subsubsection{MySQL}
+\label{sec:sub:title}
+
+\subsubsection{TripleDES}
+\label{sec:sub:title}
+
+
+\text You can cite a paper this way \cite{lecun2015deep}. 
+Find more examples on the official IEEETran website\footnote{\url{http://tug.ctan.org/biblio/bibtex/contrib/IEEEtran/IEEEexample.bib}}.  
+
+% ============ 3 =======================
+
+% ============ 4 =======================
+
+
+\section{Chapter 3: Methodology}
+\label{sec:citation}
+
+You can cite a paper this way \cite{lecun2015deep}. 
+Find more examples on the official IEEETran website\footnote{\url{http://tug.ctan.org/biblio/bibtex/contrib/IEEEtran/IEEEexample.bib}}.  
+
+\lipsum[1]
+
+% ============ 4 =======================
+
+% ============ 5 =======================
+\section{Chapter 4}
+\label{sec:figures}
+
+Make sure that all figure labels should be referred in the main text.
+For example, Fig.~\ref{fig:figure1} is an example of referring an individual image in the main text.
+I also added a custom command such that you can refer a figure this way, i.e., \figref{fig:figure1}.
+Fig.~\ref{fig:figure4x1} depicts a way to show multiple images within a figure environment.
+You could refer it individually this way, e.g., Fig.~(\ref{1a}).
+
+
+    %\begin{figure}[]
+    %  \begin{center}{}
+    %      \includegraphics[width=1\columnwidth,draft=false]
+    %      \caption{14pt.}
+    %      \label{fig:figure1}
+    %  \end{center}
+    %\end{figure}
+
+
+% ============ 5 =======================
+
+
+% ============ 6 =======================
+\section{Chapter 5}
+\label{sec:tables}
+
+Also, do not forget to refer tables that are included in an academic paper, e.g., Table~\ref{tab:basic}
+
+
+
+% ============ 6 =======================
+
+% ============ 7 =======================
+\section{Chapter 6}
+\label{sec:eq}
+
+
+% ============ 7 =======================
+
+
+% ============ 8 =======================
+\section{Conclusion}
+\label{sec:conclusion}
+
+\lipsum[3]
+
+
+% ============ 8 =======================
+
+\section*{Acknowledgement}
+This work is supported by Research and Technology Transfer Office of Bina Nusantara (Binus) University as a part of
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
